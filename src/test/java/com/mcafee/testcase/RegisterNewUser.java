@@ -15,6 +15,7 @@ public class RegisterNewUser extends TestBase{
 		Thread.sleep(2000);
 		driver.switchTo().frame(0).findElement(By.xpath(OR.getProperty("NewUser_RegisterNow"))).click();
 		Thread.sleep(2000);
+		System.out.println("Done");
 		
 	}
 }
