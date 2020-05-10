@@ -21,6 +21,7 @@ public class RegisterNewUser extends TestBase{
 		logs.debug("Login Successful!!");
 		Assert.assertTrue(isElementPresent(By.id(OR.getProperty("welcome_msg"))),"Login not successful");
 		logs.debug("Login validated!!");
+		Thread.sleep(2000);
 //		driver.findElement(By.id(OR.getProperty("welcome_msg"))).click();
 //		Thread.sleep(2000);
 //		driver.findElement(By.linkText(OR.getProperty("logout_btn"))).click();
