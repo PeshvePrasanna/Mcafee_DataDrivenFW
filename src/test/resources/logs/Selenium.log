@@ -1,0 +1,7 @@
+14:40:13,590 DEBUG devpinoyLogger:59 - Config file loaded !!!
+14:40:13,593 DEBUG devpinoyLogger:73 - OR file loaded !!!
+14:40:17,596 DEBUG devpinoyLogger:84 - Chrome is launched !!!
+14:40:22,593 DEBUG devpinoyLogger:98 - Navigated to url = https://opensource-demo.orangehrmlive.com/
+14:40:26,795 DEBUG devpinoyLogger:13 - Inside Login test page
+14:40:33,196 DEBUG devpinoyLogger:20 - Login Successful!!
+14:40:33,902 DEBUG devpinoyLogger:110 - Test executed succesfully

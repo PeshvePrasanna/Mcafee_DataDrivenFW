@@ -5,6 +5,11 @@
 	<artifactId>com.mcafee.home</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
+	<dependency>
+  <groupId>io.github.bonigarcia</groupId>
+  <artifactId>webdrivermanager</artifactId>  
+  <version>3.0.0</version>
+</dependency>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>

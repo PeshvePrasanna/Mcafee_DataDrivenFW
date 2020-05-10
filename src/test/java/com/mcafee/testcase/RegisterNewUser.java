@@ -1,7 +1,6 @@
 package com.mcafee.testcase;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.mcafee.base.TestBase;
@@ -11,11 +10,14 @@ public class RegisterNewUser extends TestBase{
 	@Test
 	public void Register_NewUser() throws InterruptedException{
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(OR.getProperty("login_btn"))).click();
+		logs.debug("Inside Login test page");
+		driver.findElement(By.id(OR.getProperty("username"))).sendKeys("Admin");
 		Thread.sleep(2000);
-		driver.switchTo().frame(0).findElement(By.xpath(OR.getProperty("NewUser_RegisterNow"))).click();
+		driver.findElement(By.id(OR.getProperty("pwd"))).sendKeys("admin123");
 		Thread.sleep(2000);
-		System.out.println("Done");
+		driver.findElement(By.id(OR.getProperty("login_btn")));
+		Thread.sleep(2000);
+		logs.debug("Login Successful!!");
 		
 	}
 }

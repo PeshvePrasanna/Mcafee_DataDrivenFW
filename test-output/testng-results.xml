@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Data Driven Basics" duration-ms="9933" started-at="2020-05-03T12:05:06Z" finished-at="2020-05-03T12:05:16Z">
+  <suite name="Data Driven Basics" duration-ms="8448" started-at="2020-05-10T14:40:24 IST" finished-at="2020-05-10T14:40:33 IST">
     <groups>
     </groups>
-    <test name="Register New User Test" duration-ms="9933" started-at="2020-05-03T12:05:06Z" finished-at="2020-05-03T12:05:16Z">
+    <test name="Register New User Test" duration-ms="8448" started-at="2020-05-10T14:40:24 IST" finished-at="2020-05-10T14:40:33 IST">
       <class name="com.mcafee.testcase.RegisterNewUser">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@1a968a59]" name="setUp" is-config="true" duration-ms="20233" started-at="2020-05-03T17:34:46Z" finished-at="2020-05-03T17:35:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@4671e53b]" name="setUp" is-config="true" duration-ms="11172" started-at="2020-05-10T14:40:13 IST" finished-at="2020-05-10T14:40:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Register_NewUser()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@1a968a59]" name="Register_NewUser" duration-ms="9833" started-at="2020-05-03T17:35:06Z" finished-at="2020-05-03T17:35:16Z">
+        <test-method status="PASS" signature="Register_NewUser()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@4671e53b]" name="Register_NewUser" duration-ms="8417" started-at="2020-05-10T14:40:24 IST" finished-at="2020-05-10T14:40:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Register_NewUser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@1a968a59]" name="tearDown" is-config="true" duration-ms="1123" started-at="2020-05-03T17:35:17Z" finished-at="2020-05-03T17:35:18Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@4671e53b]" name="tearDown" is-config="true" duration-ms="665" started-at="2020-05-10T14:40:33 IST" finished-at="2020-05-10T14:40:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
