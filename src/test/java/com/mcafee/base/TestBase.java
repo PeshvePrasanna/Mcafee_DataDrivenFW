@@ -7,6 +7,8 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,15 +23,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	/*
-	 * initialize the following
-	 * WebDriver - done
-	 * Properties - done
-	 * Logs 
-	 * WebDriver
-	 * ExtentReport
-	 * DB
-	 * Excel
-	 * Mail
+	 * initialize the following WebDriver - done Properties - done Logs WebDriver
+	 * ExtentReport DB Excel Mail
 	 * 
 	 */
 	public static WebDriver driver;
@@ -39,14 +34,12 @@ public class TestBase {
 	public static Actions actions;
 	public static WebElement ele;
 	public static Logger logs = Logger.getLogger("devpinoyLogger");
-	
-	
+
 	@BeforeSuite
-	public void setUp(){
-		
-		
-		if(driver==null){
-			
+	public void setUp() {
+
+		if (driver == null) {
+
 			try {
 				fis = new FileInputStream(
 						System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\config.properties");
@@ -76,38 +69,51 @@ public class TestBase {
 				e.printStackTrace();
 			}
 			DesiredCapabilities caps = new DesiredCapabilities();
-	        caps.setCapability("requireWindowFocus", true);
-			if(config.getProperty("browser").equals("chrome")){
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
-		        //WebDriverManager.chromedriver().setup();
+			caps.setCapability("requireWindowFocus", true);
+			if (config.getProperty("browser").equals("chrome")) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
+				// WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 				logs.debug("Chrome is launched !!!");
 			}
-			if(config.getProperty("browser").equals("firefox")){
-				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\geckodriver.exe");
-				//WebDriverManager.firefoxdriver().setup();
+			if (config.getProperty("browser").equals("firefox")) {
+				System.setProperty("webdriver.gecko.driver",
+						System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\geckodriver.exe");
+				// WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 			}
-			if(config.getProperty("browser").equals("ie")){
-				//System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\IEDriver.exe");
+			if (config.getProperty("browser").equals("ie")) {
+				// System.setProperty("webdriver.ie.driver",
+				// System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\IEDriver.exe");
 				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
 			}
-			
+
 			driver.get(config.getProperty("testsiteurl"));
 			logs.debug("Navigated to url = " + config.getProperty("testsiteurl"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("ImplicitWait")), TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("ImplicitWait")),
+					TimeUnit.SECONDS);
 			actions = new Actions(driver);
-			
+
 		}
-		
+
 	}
-	
+
+	public boolean isElementPresent(By by) {
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
+
 	@AfterSuite
-	public void tearDown(){
+	public void tearDown() {
 		driver.quit();
 		logs.debug("Test executed succesfully");
 	}
-	
+
 }

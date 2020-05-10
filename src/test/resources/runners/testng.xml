@@ -5,5 +5,12 @@
 		<classes>
 			<class name="com.mcafee.testcase.RegisterNewUser" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
+	<test name="Add Employee Test">
+		<classes>
+			<class name="com.mcafee.testcase.AddEmployee" />
+		</classes>
+	</test>
+
+	<!-- Test -->
 </suite> <!-- Suite -->

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Data Driven Basics" duration-ms="8448" started-at="2020-05-10T14:40:24 IST" finished-at="2020-05-10T14:40:33 IST">
+  <suite name="Data Driven Basics" duration-ms="15337" started-at="2020-05-10T19:22:05 IST" finished-at="2020-05-10T19:22:21 IST">
     <groups>
     </groups>
-    <test name="Register New User Test" duration-ms="8448" started-at="2020-05-10T14:40:24 IST" finished-at="2020-05-10T14:40:33 IST">
+    <test name="Register New User Test" duration-ms="15337" started-at="2020-05-10T19:22:05 IST" finished-at="2020-05-10T19:22:21 IST">
       <class name="com.mcafee.testcase.RegisterNewUser">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@4671e53b]" name="setUp" is-config="true" duration-ms="11172" started-at="2020-05-10T14:40:13 IST" finished-at="2020-05-10T14:40:24 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@3ecd23d9]" name="setUp" is-config="true" duration-ms="9956" started-at="2020-05-10T19:21:55 IST" finished-at="2020-05-10T19:22:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Register_NewUser()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@4671e53b]" name="Register_NewUser" duration-ms="8417" started-at="2020-05-10T14:40:24 IST" finished-at="2020-05-10T14:40:33 IST">
+        <test-method status="PASS" signature="Register_NewUser()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@3ecd23d9]" name="Register_NewUser" duration-ms="15288" started-at="2020-05-10T19:22:05 IST" finished-at="2020-05-10T19:22:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Register_NewUser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@4671e53b]" name="tearDown" is-config="true" duration-ms="665" started-at="2020-05-10T14:40:33 IST" finished-at="2020-05-10T14:40:33 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mcafee.testcase.RegisterNewUser@3ecd23d9]" name="tearDown" is-config="true" duration-ms="672" started-at="2020-05-10T19:22:21 IST" finished-at="2020-05-10T19:22:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
